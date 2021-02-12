@@ -1,1 +1,1 @@
-web: gunicorn main:email-service-support
+web: gunicorn main:server
