@@ -1,6 +1,7 @@
 from src import initiate_app
 
-app_instance = initiate_app()
+server = initiate_app()
 
 if __name__ == '__main__':
-    app_instance.run(threaded=True)
+    server.run(threaded=True)
+
