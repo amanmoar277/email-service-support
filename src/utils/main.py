@@ -29,12 +29,13 @@ def send_email(sender, receiver, body, password, subject, isHTML):
 
     try:
         app = server_carrier.get_server()
-        print(app.config.get('SECRET_KEY'))
-        server.login(message['From'], password or app.config.get('SECRET_KEY'))
+        # print(password or app.config.get('SECRET_KEY'))
+        server.login(message['From'], password)
         server.sendmail(message['From'], receiver, message.as_string())
         server.quit()
     
     except Exception as e:
+        logging.info('Error->',e)
         return False
 
     return True
