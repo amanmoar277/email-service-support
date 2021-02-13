@@ -67,7 +67,7 @@ def attach_routes(app):
     @app.route("/send-email", methods=["POST"])
     @retrieve_request_parameters()
     def send_email(**kwargs):
-        print(kwargs)
+        # print(kwargs)
         message = MIMEMultipart()
         sender = kwargs.get('from')
         receiver = kwargs.get('to')
