@@ -39,3 +39,19 @@ web: gunicorn main:server
 and this server variable must be present in main.py
 
 
+
+# To use this service
+
+URL: https://email-service-support.herokuapp.com/send-email
+REQUEST TYPE: POST
+REQUEST Body: 
+{
+	"from": "amanmoar.nit.kkr@gmail.com",
+	"to": "amanmoar.nit.kkr@gmail.com",
+	"isHTML": true,
+	"subject": "test",
+	"body": "<center><h1><div style=margin-top:40vh>Bro, nothing on this route!!</div></h1></center>",
+	"password": "from_email_pass_here"
+}
+
+
