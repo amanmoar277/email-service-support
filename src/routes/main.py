@@ -82,12 +82,10 @@ def attach_routes(app):
         try:
             from ..utils.main import send_email
             result = send_email(sender, receiver, body, password, subject, isHTML)
-            print(result)
        
         except Exception as e:
             return make_response(jsonify({"status": 500, "error": e, "data": 'Email Sending failed'}))
 
-        print(result)
         if result is True:
             return make_response(jsonify({"status": 200, "data": 'Email Sent Successflly'}))
         return make_response(jsonify({"status": 500, "error": {"message": 'Email Sending failed!!'}}))

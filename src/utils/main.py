@@ -34,7 +34,7 @@ def send_email(sender, receiver, body, password, subject, isHTML):
         server.sendmail(message['From'], receiver, message.as_string())
         server.quit()
     
-    except Exception as e:
+    except NameError as e:
         logging.info('Error->',e)
         return False
 
