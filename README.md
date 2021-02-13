@@ -39,10 +39,3 @@ web: gunicorn main:server
 and this server variable must be present in main.py
 
 
-
-TODO: 
-Email support
-validations
-middleware to extract request body
-config initialization
-DB connection with heroku postgres
