@@ -28,14 +28,16 @@ def send_email(sender, receiver, body, password, subject, isHTML):
     server.starttls()
 
     try:
-        server.login(message['From'], '2020@Qwer')
-        server.sendmail(message['From'], receiver, msg.as_string())
+        app = server_carrier.get_server()
+        print(app.config.get('SECRET_KEY'))
+        server.login(message['From'], password or app.config.get('SECRET_KEY'))
+        server.sendmail(message['From'], receiver, message.as_string())
         server.quit()
     
     except Exception as e:
-        return make_response(jsonify({"status": 500, "error": e, "message": 'Email sending fail'}))
+        return False
 
-    return make_response(jsonify({"status": 200, "data": {"loaded_flows": []}}))
+    return True
 
 def retrieve_request_parameters():
     """It is a decorator Python file that retreive request

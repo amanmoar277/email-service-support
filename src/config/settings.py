@@ -13,3 +13,5 @@ DEBUG = settings["DEBUG"]
 
 # mongo related settings
 MONGODB_URI = settings["MONGODB_URI"]
+MONGODB_NAME = settings["MONGODB_NAME"]
+SECRET_KEY = settings["SECRET_KEY"]

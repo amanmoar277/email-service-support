@@ -67,6 +67,7 @@ def db_settings(settings):
     config = {
         "MONGODB_URI": str,
         "MONGODB_NAME": str,
+        "SECRET_KEY": str,
     }
 
     return assign_settings(settings, config)
