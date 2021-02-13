@@ -42,16 +42,16 @@ and this server variable must be present in main.py
 
 # To use this service
 
-URL: https://email-service-support.herokuapp.com/send-email
-REQUEST TYPE: POST
-REQUEST Body: 
-{
-	"from": "amanmoar.nit.kkr@gmail.com",
-	"to": "amanmoar.nit.kkr@gmail.com",
-	"isHTML": true,
-	"subject": "test",
-	"body": "<center><h1><div style=margin-top:40vh>Bro, nothing on this route!!</div></h1></center>",
-	"password": "from_email_pass_here"
-}
+URL: https://email-service-support.herokuapp.com/send-email <br />
+REQUEST TYPE: POST<br />
+REQUEST Body: <br />
+{<br />
+	"from": "sender_email",<br />
+	"to": "receiver_email",<br />
+	"isHTML": true,  ( or false)<br />
+	"subject": "email_subject_here",<br />
+	"body": "<center><h1><div style=margin-top:40vh>Bro, nothing on this route!!</div></h1></center>",<br />
+	"password": "from_email_pass_here"<br />
+}<br />
 
 
