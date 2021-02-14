@@ -1,0 +1,45 @@
+1. why __init__.py is empty in each directory
+https://stackoverflow.com/questions/30323607/why-do-i-have-to-add-a-blank-init-py-file-to-import-from-subdirectories
+
+If there is not any __init__.py then we can't use __file__ in that directory
+
+2. what is blueprint
+https://exploreflask.com/en/latest/blueprints.html#:~:text=A%20blueprint%20defines%20a%20collection,be%20applied%20to%20an%20application.&text=This%20blueprint%20would%20define%20the,be%20served%20on%20those%20routes.
+
+3. __name__
+https://www.geeksforgeeks.org/__name__-special-variable-python/
+
+4. __file__
+https://www.geeksforgeeks.org/__file__-a-special-variable-in-python/?ref=rp
+
+5. *args and **kwargs in python
+https://www.geeksforgeeks.org/args-kwargs-python/
+
+6. __len__
+https://www.geeksforgeeks.org/internal-working-of-the-len-function-in-python/
+
+>>> class TheHobbit:
+...     def __len__(self):
+...         return 95022
+...
+>>> the_hobbit = TheHobbit()
+>>> len(the_hobbit)
+95022
+
+__len__ can be modified explicitly which is ot recommended
+
+
+7. type check in python
+http://stackoverflow.com/questions/152580/whats-the-canonical-way-to-check-for-type-in-python
+
+8. does python use duck typing
+
+
+9. @wraps
+https://stackoverflow.com/questions/308999/what-does-functools-wraps-do
+https://www.geeksforgeeks.org/python-functools-wraps-function/
+
+10. @decorators
+https://www.programiz.com/python-programming/decorator
+
+
