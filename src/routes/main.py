@@ -1,12 +1,12 @@
 import os
-import smtplib
+# import smtplib
 import logging
-from pymongo import MongoClient
-from flask import Blueprint, make_response, jsonify, request
+# from pymongo import MongoClient
+from flask import make_response, jsonify, request
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from ..utils.main import retrieve_request_parameters, parse_json, get_defaut_collection         
-from src.utils.db import connect_to_db, DatabaseTypes, DatabaseNames, Collections
+from ..utils.main import retrieve_request_parameters, get_defaut_collection         
+# from src.utils.db import connect_to_db, DatabaseTypes, DatabaseNames, Collections
 
 def attach_routes(app):
     """Attach routes to app_instance"""

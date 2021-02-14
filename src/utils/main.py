@@ -68,6 +68,3 @@ def retrieve_request_parameters():
             return func(*args, **kwargs)
         return inner
     return wrapper
-
-def parse_json(data):
-    return json.loads(json_util.dumps(data))

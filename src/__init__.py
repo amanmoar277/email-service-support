@@ -19,12 +19,15 @@ class Server:
         self.server = app
 
 
+def register_blueprints(app):
+    from .attach_route_via_blueprint import attach_route_via_blueprint
+    attach_route_via_blueprint(app)
+
 
 def attach_routes(app):
     from .routes.main import attach_routes
     attach_routes(app)
     
-
 
 def initiate_app():
     """Create a Flask app
@@ -49,6 +52,8 @@ def initiate_app():
 
     CORS(app, supports_credentials=True)
 
-    attach_routes(app)
+    # attach routes using blueprints
+    # attach_routes(app)
+    register_blueprints(app)
 
     return app
